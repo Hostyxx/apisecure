@@ -96,8 +96,21 @@ Flask==3.0.0
 
 ## Contribuer
 
+## Ajout de l'entité User
+
+```python
+class Utilisateur(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(120), nullable=False)
+
+```
+
 Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou soumettre une pull request.
 
 ## Licence
 
 Ce projet est sous licence MIT.
+
+
